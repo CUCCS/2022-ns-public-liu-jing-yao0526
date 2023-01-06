@@ -105,7 +105,6 @@ sudo ip link set promisc off
 # 获取当前局域网的网关MAC地址
 # 构造一个ARP请求
 arpboradcast = Ether(dst = "ff:ff:ff:ff:ff:ff")/ARP(op = 0,pdst= ="172.16.111.1")
-
 #查看构造好的ARP报文请求
 arpboradcast.show()
 ```
