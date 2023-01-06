@@ -139,9 +139,6 @@ ip neigh
 ## 伪装网关给受害者发送ARP响应
 restoreptk1 = Ether()/ARP(op=2,psrc="172.16.111.1",hwsrc="08:00:27:ff:b8:28",pdst="172.16.111.130",hwdst"08:00:27:c5:c0:21")
 sendp(restorepkt1,count=100,inter=0.2)
-
-## (选做)
-restorepkt2 = Ether()/ARP(op=2,pdst="172.16.111.1",hwdst="08:00:27:ff:b8:28",psrc="172.16.111.130",hwsrc="08:00:27:c5:c0:21")
 ```
 
 ![restoreptk](img/restoreptk.png)
